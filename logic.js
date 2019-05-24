@@ -32,15 +32,15 @@ async function changeImage(id) {
     if (uno == 0) {
         unosave = id;
         uno = array[id];
-        document.getElementById(`${id}`).src = `/image/${array[id]}.jpg`;
+        document.getElementById(`${id}`).src = `image/${array[id]}.jpg`;
     } else {
         dos = array[id];
-        document.getElementById(`${id}`).src = `/image/${array[id]}.jpg`;
+        document.getElementById(`${id}`).src = `image/${array[id]}.jpg`;
     }
     await sleep(500);
     if (uno != dos && dos != 0) {
-        document.getElementById(`${unosave}`).src = `/image/0.jpg`;
-        document.getElementById(`${id}`).src = `/image/0.jpg`;
+        document.getElementById(`${unosave}`).src = `image/0.jpg`;
+        document.getElementById(`${id}`).src = `image/0.jpg`;
         uno = 0;
         dos = 0;
     }
